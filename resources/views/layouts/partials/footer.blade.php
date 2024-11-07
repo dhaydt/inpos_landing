@@ -106,8 +106,8 @@
             <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-center mt-4">
                 <p class="fw-semibold">2024 PT. Inpos Digital Indonesia. All Right Reserved</p>
                 <div class="d-flex align-items-center gap-3 justify-content-center">
-                    <a href="syarat-ketentuan.html">Syarat dan Ketentuan</a>
-                    <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+                    <a href="{{ route('syarat_ketentuan') }}">Syarat dan Ketentuan</a>
+                    <a href="{{ route('kebijakan_privasi') }}">Kebijakan Privasi</a>
                 </div>
             </div>
         </div>

@@ -25,14 +25,17 @@
                             <!-- Navbar links inside Offcanvas -->
                             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="feature.html" data-link="feature.html">Fitur
+                                    <a class="nav-link" href="{{ route('feature') }}"
+                                        data-link="{{ route('feature') }}">Fitur
                                         Aplikasi</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="hardware.html" data-link="hardware.html">Perangkat</a>
+                                    <a class="nav-link" href="{{ route('hardware') }}"
+                                        data-link="{{ route('hardware') }}">Perangkat</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="harga.html" data-link="harga.html">Harga</a>
+                                    <a class="nav-link" href="{{ route('price') }}"
+                                        data-link="{{ route('price') }}">Harga</a>
                                 </li>
                                 <!-- Dropdown menu -->
                                 <li class="nav-item dropdown">
@@ -41,9 +44,10 @@
                                         Support
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="supportDropdown">
-                                        <li><a class="dropdown-item" href="panduan.html"
-                                                data-link="padnuan.html">Panduan</a></li>
-                                        <li><a class="dropdown-item" href="faq.html" data-link="faq.html">FAQ</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('panduan') }}"
+                                                data-link="{{ route('panduan') }}">Panduan</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('faq') }}"
+                                                data-link="{{ route('faq') }}">FAQ</a></li>
                                     </ul>
                                 </li>
                             </ul>
