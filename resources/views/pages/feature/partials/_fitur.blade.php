@@ -8,64 +8,52 @@
         <div class="fitur-wrap">
             <img src="assets/images/fitur.png" alt="fitur" class="d-block d-md-none mb-5" />
             <div id="item-0">
+                @if (data_get($fitur, '0.judul'))
                 <div class="feature-item feature-item-1">
-                    <span>Kasir Online</span>
-                    <ul>
-                        <li>Penjualan Produk</li>
-                        <li>Pembayaran Digital</li>
-                        <li>Pengaturan Struk</li>
-                    </ul>
+                    <span>{{ ucwords(data_get($fitur, '0.judul', '')) }}</span>
+                    {!! ucwords(data_get($fitur, '0.konten', '')) !!}
                 </div>
+                @endif
             </div>
             <div id="item-1">
+                @if (data_get($fitur, '1.judul'))
                 <div class="feature-item feature-item-2">
-                    <span>Karyawan</span>
-                    <ul>
-                        <li>Manajemen Karyawan</li>
-                        <li>Pengaturan Jadwal Kerja</li>
-                        <li>Absen dan Izin Karyawan</li>
-                    </ul>
+                    <span>{{ ucwords(data_get($fitur, '1.judul', '')) }}</span>
+                    {!! ucwords(data_get($fitur, '1.konten', '')) !!}
                 </div>
+                @endif
             </div>
             <div id="item-2">
                 <div class="d-flex flex-column flex-md-row gap-4 w-full justify-content-evenly">
+                    @if (data_get($fitur, '2.judul'))
                     <div class="feature-item feature-item-3">
-                        <span>Inventori</span>
-                        <ul>
-                            <li>Manajemen Supplier</li>
-                            <li>Pembelian Stok Barang</li>
-                            <li>Manajemen Stok Barang</li>
-                        </ul>
+                        <span>{{ ucwords(data_get($fitur, '2.judul', '')) }}</span>
+                        {!! ucwords(data_get($fitur, '2.konten', '')) !!}
                     </div>
+                    @endif
+                    @if (data_get($fitur, '3.judul'))
                     <div class="feature-item feature-item-4">
-                        <span>Produksi</span>
-                        <ul>
-                            <li>Manajemen Produsen</li>
-                            <li>Produksi dan Pengirman</li>
-                            <li>Mutasi Barang</li>
-                        </ul>
+                        <span>{{ ucwords(data_get($fitur, '3.judul', '')) }}</span>
+                        {!! ucwords(data_get($fitur, '3.konten', '')) !!}
                     </div>
+                    @endif
                 </div>
             </div>
             <div id="item-3">
+                @if (data_get($fitur, '4.judul'))
                 <div class="feature-item feature-item-5">
-                    <span>Analisa Laba</span>
-                    <ul>
-                        <li>Analisa Penjualan</li>
-                        <li>Analisa Konsumen</li>
-                        <li>Analisa Promosi</li>
-                    </ul>
+                    <span>{{ ucwords(data_get($fitur, '4.judul', '')) }}</span>
+                    {!! ucwords(data_get($fitur, '4.konten', '')) !!}
                 </div>
+                @endif
             </div>
             <div id="item-4">
+                @if (data_get($fitur, '5.judul'))
                 <div class="feature-item feature-item-6">
-                    <span>Aplikasi Owner</span>
-                    <ul>
-                        <li>Monitoring Penjualan</li>
-                        <li>Monitoring Karyawan</li>
-                        <li>Monitoring Inventori</li>
-                    </ul>
+                    <span>{{ ucwords(data_get($fitur, '5.judul', '')) }}</span>
+                    {!! ucwords(data_get($fitur, '5.konten', '')) !!}
                 </div>
+                @endif
             </div>
             <div id="item-5" class="d-none d-md-flex justify-content-center align-items-center">
                 <img src="assets/images/fitur.png" alt="fitur" />

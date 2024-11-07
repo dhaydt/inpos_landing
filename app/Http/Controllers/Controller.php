@@ -2,6 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Master\FiturLengkap;
+use App\Models\Master\Harga;
+use App\Models\Master\Multi;
+use App\Models\Master\Panduan;
+use App\Models\Master\Perangkat;
+use App\Models\Master\Solution;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
@@ -16,19 +22,25 @@ class Controller extends BaseController
     }
 
     public function feature(){
-        return view('pages.feature.index');
+        $data['fitur'] = FiturLengkap::all();
+        $data['solutions'] = Solution::with('details')->get();
+        $data['multi'] = Multi::all();
+        return view('pages.feature.index', $data);
     }
 
     public function hardware(){
-        return view('pages.hardware.index');
+        $data['hardwares'] = Perangkat::all();
+        return view('pages.hardware.index', $data);
     }
 
     public function price(){
-        return view('pages.price.index');
+        $data['prices'] = Harga::all();
+        return view('pages.price.index', $data);
     }
 
     public function panduan(){
-        return view('pages.panduan.index');
+        $data['panduan'] = Panduan::all();
+        return view('pages.panduan.index', $data);
     }
 
     public function faq(){

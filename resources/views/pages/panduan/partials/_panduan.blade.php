@@ -8,13 +8,14 @@
         </div>
 
         <div class="row g-4">
+            @foreach ($panduan as $key => $p)
             <div class="col-12 col-md-4">
                 <div class="panduan-card">
                     <img src="assets/images/card-img.png" alt="card image" class="w-full" />
 
                     <div class="panduan-card-body">
                         <p>Panduan Penggunaan</p>
-                        <h3>Cara mendapatkan dan memasang aplikasi Sipos bisnis</h3>
+                        <h3>{{ $p->judul }}</h3>
 
                         <div class="d-flex align-items-center gap-3 mb-4">
                             <div class="d-flex align-items-center gap-2">
@@ -23,66 +24,16 @@
                             </div>
                             <div class="d-flex align-items-center gap-2">
                                 <img src="assets/images/icons/time.svg" alt="time" />
-                                <span>3 min</span>
+                                <span>{{ $p->created_at->diffForHumans() }}</span>
                             </div>
                         </div>
                         <p>
-                            Berikut ini adalah beberapa langkah yang bisa Anda ikuti untuk
-                            melakukan instalasi aplikasi labba...
+                            {{ App\CPU\Helpers::getCharStripTags($p->konten, 50) }}
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4">
-                <div class="panduan-card">
-                    <img src="assets/images/card-img.png" alt="card image" class="w-full" />
-
-                    <div class="panduan-card-body">
-                        <p>Panduan Penggunaan</p>
-                        <h3>Cara mendapatkan dan memasang aplikasi Sipos bisnis</h3>
-
-                        <div class="d-flex align-items-center gap-3 mb-4">
-                            <div class="d-flex align-items-center gap-2">
-                                <img src="assets/images/icons/admin.svg" alt="admin" />
-                                <span>Admin</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <img src="assets/images/icons/time.svg" alt="time" />
-                                <span>3 min</span>
-                            </div>
-                        </div>
-                        <p>
-                            Berikut ini adalah beberapa langkah yang bisa Anda ikuti untuk
-                            melakukan instalasi aplikasi labba...
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4">
-                <div class="panduan-card">
-                    <img src="assets/images/card-img.png" alt="card image" class="w-full" />
-
-                    <div class="panduan-card-body">
-                        <p>Panduan Penggunaan</p>
-                        <h3>Cara mendapatkan dan memasang aplikasi Sipos bisnis</h3>
-
-                        <div class="d-flex align-items-center gap-3 mb-4">
-                            <div class="d-flex align-items-center gap-2">
-                                <img src="assets/images/icons/admin.svg" alt="admin" />
-                                <span>Admin</span>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <img src="assets/images/icons/time.svg" alt="time" />
-                                <span>3 min</span>
-                            </div>
-                        </div>
-                        <p>
-                            Berikut ini adalah beberapa langkah yang bisa Anda ikuti untuk
-                            melakukan instalasi aplikasi labba...
-                        </p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
 
         <button class="d-flex mx-auto mt-5 gap-3 align-items-center justify-content-center btn fs-5">

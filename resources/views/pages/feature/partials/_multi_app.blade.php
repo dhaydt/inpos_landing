@@ -8,30 +8,15 @@
         </div>
 
         <div class="row g-4">
+            @foreach ($multi as $key => $m)
             <div class="col-md-4 d-flex flex-column align-items-center text-center">
                 <img src="assets/images/multi-app1.png" class="mx-auto" alt="multi aplikasi" />
-                <h3 class="fs-4 mt-3 text-center mb-4">Sipos</h3>
+                <h3 class="fs-4 mt-3 text-center mb-4">{{ $m->judul }}</h3>
                 <p>
-                    Aplikasi Kasir Online untuk mengatur penjualan dan pembayaran
-                    transaksi bisnis anda.
+                    {!! $m->konten !!}
                 </p>
             </div>
-            <div class="col-md-4 d-flex flex-column align-items-center text-center">
-                <img src="assets/images/multi-app2.png" class="mx-auto" alt="multi aplikasi" />
-                <h3 class="fs-4 mt-3 text-center mb-4">Sipos Teams</h3>
-                <p>
-                    Aplikasi SDM untuk mengelola karyawan agar operasional bisnis anda
-                    berjalan dengan baik.
-                </p>
-            </div>
-            <div class="col-md-4 d-flex flex-column align-items-center text-center">
-                <img src="assets/images/multi-app3.png" class="mx-auto" alt="multi aplikasi" />
-                <h3 class="fs-4 mt-3 text-center mb-4">Sipos Owner</h3>
-                <p>
-                    Aplikasi Owner untuk memonitor aktifitas bisnis anda secara
-                    praktis, mudah dan realtime.
-                </p>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
