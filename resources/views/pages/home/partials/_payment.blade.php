@@ -11,7 +11,7 @@
             </div>
 
             <div class="col-md-5">
-                <img src="{{ config('app.backend_url') .'/storage/' . $payment['gambar'] }}" class="w-full"
+                <img src="{{ config('app.backend_url') . '/storage/' . $payment['gambar'] }}" class="w-full"
                     alt="payment" />
             </div>
         </div>

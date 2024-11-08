@@ -9,7 +9,8 @@
                     <p>Harga mulai dari Rp 150,000 / Bulan</p>
 
                     <div class="d-flex flex-column flex-md-row align-items-md-center gap-3 mt-5">
-                        <a href="#" class="btn btn-primary rounded-pill fs-5 px-4 py-2">Beli Paket Sekarang</a>
+                        <a href="{{ route('price') }}" class="btn btn-primary rounded-pill fs-5 px-4 py-2">Beli Paket
+                            Sekarang</a>
                         <a href="#" class="btn btn-outline-light rounded-pill fs-5 px-4 py-2">Konsultasi
                             Kebutuhan</a>
                     </div>
@@ -55,7 +56,9 @@
                 <div class="col-md-3">
                     <p class="fw-semibold mb-5 fs-6">Solusi Bisnis</p>
                     <ul class="d-flex flex-column gap-4 fw-medium">
-                        <li><a>Toko Retail</a></li>
+                        @foreach ($solusi_bisnis as $key => $solusi)
+                            <li><a href="">Toko Retail</a></li>
+                        @endforeach
                         <li><a>Food & Beverage</a></li>
                         <li><a>Jasa Laundry</a></li>
                         <li><a>Babershop</a></li>
@@ -65,10 +68,9 @@
                 <div class="col-md-3">
                     <p class="fw-semibold mb-5 fs-6">Harga</p>
                     <ul class="d-flex flex-column gap-4 fw-medium">
-                        <li><a>Paket Basic</a></li>
-                        <li><a>Paket Advance</a></li>
-                        <li><a>Paket Professional</a></li>
-                        <li><a>Paket Enterprise</a></li>
+                        @foreach ($hargas as $key => $harga)
+                            <li><a href="{{ route('price') }}">{{ $harga->nama_harga }}</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -85,29 +87,20 @@
                 </div>
 
                 <div class="social-wrap">
-                    <a href="#">
-                        <img src="assets/images/mail.png" alt="mail" />
-                    </a>
-                    <a href="#">
-                        <img src="assets/images/fb.png" alt="fb" />
-                    </a>
-                    <a href="#">
-                        <img src="assets/images/tiktok.png" alt="tiktok" />
-                    </a>
-                    <a href="#">
-                        <img src="assets/images/ig.png" alt="ig" />
-                    </a>
-                    <a href="#">
-                        <img src="assets/images/yt.png" alt="youtube" />
-                    </a>
+                    @foreach ($sosmeds as $key => $sosmed)
+                        <a href="{{ $sosmed->url }}">
+                            <img src="{{ config('app.backend_url') . '/storage/' . $sosmed->icon }}"
+                                alt="{{ $sosmed->nama }}l" />
+                        </a>
+                    @endforeach
                 </div>
             </div>
 
             <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-center mt-4">
                 <p class="fw-semibold">2024 PT. Inpos Digital Indonesia. All Right Reserved</p>
                 <div class="d-flex align-items-center gap-3 justify-content-center">
-                    <a href="syarat-ketentuan.html">Syarat dan Ketentuan</a>
-                    <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+                    <a href="{{ route('syarat_ketentuan') }}">Syarat dan Ketentuan</a>
+                    <a href="{{ route('kebijakan_privasi') }}">Kebijakan Privasi</a>
                 </div>
             </div>
         </div>

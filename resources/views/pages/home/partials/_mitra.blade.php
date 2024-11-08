@@ -9,80 +9,25 @@
 
         <div id="carouselPartners" class="carousel slide">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselPartners" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselPartners" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselPartners" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+                @foreach ($mitras as $key => $chunk_mitra)
+                    <button type="button" data-bs-target="#carouselPartners" data-bs-slide-to="{{ $key }}"
+                        @if ($key == 0) class="active" @endif aria-current="true"
+                        aria-label="Slide {{ $key + 1 }}"></button>
+                @endforeach
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row gy-3 align-items-center mb-5">
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/bakso-terbang.png" class="img-fluid" alt="bakso-terbang" />
-                        </div>
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/winaz.png" class="img-fluid" alt="winaz" />
-                        </div>
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/winaz-coffee.png" class="img-fluid" alt="winaz-coffee" />
-                        </div>
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/wigs.png" class="img-fluid" alt="wigs" />
-                        </div>
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/teras-kota.png" class="img-fluid" alt="teras-kota" />
-                        </div>
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/car-wash.png" class="img-fluid" alt="car-wash" />
+                @foreach ($mitras as $key => $chunk_mitra)
+                    <div class="carousel-item @if ($key == 0) active @endif">
+                        <div class="row gy-3 align-items-center mb-5">
+                            @foreach ($chunk_mitra as $key => $mitra)
+                                <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
+                                    <img src="{{ config('app.backend_url') . '/storage/' . $mitra->gambar }}"
+                                        class="img-fluid" alt="{{ $mitra->gambar }}" />
+                                </div>
+                            @endforeach
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row gy-3 align-items-center mb-5">
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/bakso-terbang.png" class="img-fluid" alt="bakso-terbang" />
-                        </div>
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/winaz.png" class="img-fluid" alt="winaz" />
-                        </div>
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/winaz-coffee.png" class="img-fluid" alt="winaz-coffee" />
-                        </div>
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/wigs.png" class="img-fluid" alt="wigs" />
-                        </div>
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/teras-kota.png" class="img-fluid" alt="teras-kota" />
-                        </div>
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/car-wash.png" class="img-fluid" alt="car-wash" />
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row gy-3 align-items-center mb-5">
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/bakso-terbang.png" class="img-fluid" alt="bakso-terbang" />
-                        </div>
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/winaz.png" class="img-fluid" alt="winaz" />
-                        </div>
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/winaz-coffee.png" class="img-fluid" alt="winaz-coffee" />
-                        </div>
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/wigs.png" class="img-fluid" alt="wigs" />
-                        </div>
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/teras-kota.png" class="img-fluid" alt="teras-kota" />
-                        </div>
-                        <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="assets/images/car-wash.png" class="img-fluid" alt="car-wash" />
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

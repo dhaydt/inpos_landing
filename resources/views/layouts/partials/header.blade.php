@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg fixed-top z-3 bg-transparent" id="navbar">
         <div class="container">
             <div class="nav-wrap">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     <img src="assets/images/logo.png" alt="Logo" />
                 </a>
 
@@ -25,33 +25,37 @@
                             <!-- Navbar links inside Offcanvas -->
                             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="feature.html" data-link="feature.html">Fitur
+                                    <a class="nav-link" href="{{ route('feature') }}"
+                                        data-link="{{ route('feature') }}">Fitur
                                         Aplikasi</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="hardware.html" data-link="hardware.html">Perangkat</a>
+                                    <a class="nav-link" href="{{ route('hardware') }}"
+                                        data-link="{{ route('hardware') }}">Perangkat</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="harga.html" data-link="harga.html">Harga</a>
+                                    <a class="nav-link" href="{{ route('price') }}"
+                                        data-link="{{ route('price') }}">Harga</a>
                                 </li>
                                 <!-- Dropdown menu -->
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="supportDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="#" id="supportDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Support
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="supportDropdown">
-                                        <li><a class="dropdown-item" href="panduan.html"
-                                                data-link="padnuan.html">Panduan</a></li>
-                                        <li><a class="dropdown-item" href="faq.html" data-link="faq.html">FAQ</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('panduan') }}"
+                                                data-link="{{ route('panduan') }}">Panduan</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('faq') }}"
+                                                data-link="{{ route('faq') }}">FAQ</a></li>
                                     </ul>
                                 </li>
                             </ul>
 
                             <!-- Login & Register buttons -->
                             <div class="d-flex gap-2 align-items-center mt-3 mt-md-0">
-                                <a href="login.html" class="login px-4">Masuk</a>
-                                <a href="register.html" class="btn btn-primary rounded-pill px-4">Coba
+                                <!-- a href="login.html" class="login px-4">Masuk</a -->
+                                <a href="#register" class="btn btn-primary rounded-pill px-4">Coba
                                     Gratis</a>
                             </div>
                         </div>

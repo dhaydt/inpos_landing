@@ -57,7 +57,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'backend_url' => env('BACKEND_URL', 'http://pos_landing_admin.test'),
+    'backend_url' => env('BACKEND_URL', 'http://inpos_landing_admin.test'),
 
     'asset_url' => env('ASSET_URL'),
 
