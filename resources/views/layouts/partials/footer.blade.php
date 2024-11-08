@@ -26,45 +26,49 @@
                 <div class="col-md-3">
                     <a href="#">
                         <p class="fst-italic mb-0">Aplikasi Point Of Sales</p>
-                        <img src="assets/images/logo.png" alt="logo" />
+                        <img src="{{ config('app.backend_url') . '/storage/' . $profile['logo'] }}" alt="logo"
+                            class="max-h-34" />
                     </a>
                     <p class="mt-4">
-                        Aplikasi kasir online terbaik dan terlengkap untuk semua jenis usaha
-                        naikin laba.
+                        {{ $profile['deskripsi'] ?? 'Deskripsi aplikasi' }}
                     </p>
 
                     <div class="contact mt-4">
                         <h2 class="fs-5">Head Office</h2>
-                        <p>Jl. Diponegoro 240</p>
-                        <p>Bandung Jawa Barat 17510</p>
+                        <p>{{ $profile['alamat'] ?? 'Alamat aplikasi' }}</p>
                     </div>
                     <div class="contact mt-4">
                         <h2 class="fs-5">Inpos Care</h2>
-                        <p>021-12344567</p>
+                        <p>{{ $profile['phone'] ?? 'Phone aplikasi' }}</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <p class="fw-semibold mb-5 fs-6">Layanan</p>
                     <ul class="d-flex flex-column gap-4 fw-medium">
-                        @foreach ($footer_layanan as $key => $layanan)
-                        <li><a href="javascript:">{{ $layanan }}</a></li>
-                        @endforeach
+                        <li><a>Point Of Sale</a></li>
+                        <li><a></a>Cashless Payment</a></li>
+                        <li><a>Manajemen Karyawan</a></li>
+                        <li><a>Manajemen Pelanggan</a></li>
+                        <li><a>Manajemen Inventori</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <p class="fw-semibold mb-5 fs-6">Solusi Bisnis</p>
                     <ul class="d-flex flex-column gap-4 fw-medium">
-                        @foreach ($footer_bisnis as $key => $solusi)
-                        <li><a href="javascript:">{{ $solusi }}</a></li>
-                        @endforeach
+                        <li><a>Toko Retail</a></li>
+                        <li><a>Food & Beverage</a></li>
+                        <li><a>Jasa Laundry</a></li>
+                        <li><a>Babershop</a></li>
+                        <li><a>Carwash & Showroom</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <p class="fw-semibold mb-5 fs-6">Harga</p>
                     <ul class="d-flex flex-column gap-4 fw-medium">
-                        @foreach ($footer_harga as $key => $harga)
-                        <li><a href="javascript:">{{ $harga }}</a></li>
-                        @endforeach
+                        <li><a>Paket Basic</a></li>
+                        <li><a>Paket Advance</a></li>
+                        <li><a>Paket Professional</a></li>
+                        <li><a>Paket Enterprise</a></li>
                     </ul>
                 </div>
             </div>
@@ -72,10 +76,10 @@
             <div
                 class="border-top border-bottom border-white py-3 mt-5 d-flex flex-column flex-md-row align-items-md-center justify-content-between row-gap-3">
                 <div class="d-flex align-items-center gap-3">
-                    <a href="#">
+                    <a href="{{ $profile['url_playstore'] ?? 'javascript:' }}">
                         <img src="assets/images/googleplay-download.png" alt="googleplay-download" class="w-full" />
                     </a>
-                    <a href="#">
+                    <a href="{{ $profile['url_appstore'] ?? 'javascript:' }}">
                         <img src="assets/images/appstore-download.png" alt="appstore-download" class="w-full" />
                     </a>
                 </div>
@@ -91,7 +95,7 @@
             </div>
 
             <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-center mt-4">
-                <p class="fw-semibold">2024 PT. Inpos Digital Indonesia. All Right Reserved</p>
+                <p class="fw-semibold">{{ $profile['nama'] ?? 'Nama Perusahaan' }}</p>
                 <div class="d-flex align-items-center gap-3 justify-content-center">
                     <a href="{{ route('syarat_ketentuan') }}">Syarat dan Ketentuan</a>
                     <a href="{{ route('kebijakan_privasi') }}">Kebijakan Privasi</a>

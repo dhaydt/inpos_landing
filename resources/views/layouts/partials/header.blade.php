@@ -1,9 +1,16 @@
 <header>
+    <style>
+        .max-h-34 {
+            max-height: 34px;
+        }
+
+    </style>
     <nav class="navbar navbar-expand-lg fixed-top z-3 bg-transparent" id="navbar">
         <div class="container">
             <div class="nav-wrap">
-                <a class="navbar-brand" href="{{ route('home') }}">
-                    <img src="assets/images/logo.png" alt="Logo" />
+                <a class="navbar-brand" class="max-h-34" href="{{ route('home') }}">
+                    <img src="{{ config('app.backend_url') . '/storage/' . $profile['logo'] }}" class="max-h-34"
+                        alt="Logo" />
                 </a>
 
                 <div class="d-flex d-md flex-row-reverse flex-md-row">
@@ -39,8 +46,8 @@
                                 </li>
                                 <!-- Dropdown menu -->
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="supportDropdown"
-                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="#" id="supportDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
                                         Support
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="supportDropdown">

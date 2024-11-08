@@ -8,6 +8,8 @@ use App\Models\Master\Layanan;
 use App\Models\Master\LayananHome;
 use App\Models\Master\Mitra;
 use App\Models\Master\Pembayaran;
+use App\Models\Master\Profile\Profile;
+use App\Models\Master\ProfileWebsite;
 use App\Models\Master\SolutionDetail;
 use App\Models\Master\Sosmed;
 use Illuminate\Support\Facades\View;
@@ -82,6 +84,7 @@ class AppServiceProvider extends ServiceProvider
         $data['footer_bisnis'] = $footer_bisnis;
         $data['footer_harga'] = $footer_harga;
         $data['footer_layanan'] = $footer_layanan;
+        $data['profile'] = ProfileWebsite::orderBy('created_at', 'desc')->first();
 
         View::share($data);
     }
