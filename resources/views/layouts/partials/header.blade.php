@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg fixed-top z-3 bg-transparent" id="navbar">
         <div class="container">
             <div class="nav-wrap">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     <img src="assets/images/logo.png" alt="Logo" />
                 </a>
 
@@ -39,8 +39,8 @@
                                 </li>
                                 <!-- Dropdown menu -->
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="supportDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="#" id="supportDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Support
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="supportDropdown">

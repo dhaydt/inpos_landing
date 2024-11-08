@@ -1,11 +1,9 @@
 <section class="section-single">
     <div class="container">
-        <h2 class="section-title text-center">Kebijakan Privasi</h2>
+        <h2 class="section-title text-center">{{ $kebijakan->title }}</h2>
         <div class="box">
             <p>
-                Sipos menyediakan banyak pilihan pembayaran untuk segala kebutuhan
-                berjualan, mulai dari Tunai, Qris Statis, Qris Dinamis, Mesin EDC,
-                E-Wallet dan Transfer Bank.
+                {{ $kebijakan->term }}
             </p>
         </div>
     </div>
