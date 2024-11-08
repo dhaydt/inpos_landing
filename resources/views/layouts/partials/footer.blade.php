@@ -39,7 +39,7 @@
                     </div>
                     <div class="contact mt-4">
                         <h2 class="fs-5">Inpos Care</h2>
-                        <p>{{ $profile['phone'] ?? 'Phone aplikasi' }}</p>
+                        <p>2024 {{ $profile['phone'] ?? 'Phone aplikasi' }}</p>
                     </div>
                 </div>
                 <div class="col-md-3">
