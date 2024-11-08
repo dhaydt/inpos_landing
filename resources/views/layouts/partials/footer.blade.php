@@ -39,7 +39,7 @@
                     </div>
                     <div class="contact mt-4">
                         <h2 class="fs-5">Inpos Care</h2>
-                        <p>2024 {{ $profile['phone'] ?? 'Phone aplikasi' }}</p>
+                        <p>{{ $profile['phone'] ?? 'Phone aplikasi' }}</p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -95,7 +95,7 @@
             </div>
 
             <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-center mt-4">
-                <p class="fw-semibold">{{ $profile['nama'] ?? 'Nama Perusahaan' }}</p>
+                <p class="fw-semibold">2024 {{ $profile['nama'] ?? 'Nama Perusahaan' }}. All Right Reserved</p>
                 <div class="d-flex align-items-center gap-3 justify-content-center">
                     <a href="{{ route('syarat_ketentuan') }}">Syarat dan Ketentuan</a>
                     <a href="{{ route('kebijakan_privasi') }}">Kebijakan Privasi</a>
