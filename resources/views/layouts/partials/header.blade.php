@@ -54,8 +54,8 @@
 
                             <!-- Login & Register buttons -->
                             <div class="d-flex gap-2 align-items-center mt-3 mt-md-0">
-                                <a href="login.html" class="login px-4">Masuk</a>
-                                <a href="register.html" class="btn btn-primary rounded-pill px-4">Coba
+                                <!-- a href="login.html" class="login px-4">Masuk</a -->
+                                <a href="#register" class="btn btn-primary rounded-pill px-4">Coba
                                     Gratis</a>
                             </div>
                         </div>
