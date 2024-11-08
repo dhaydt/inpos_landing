@@ -27,7 +27,7 @@
                     <a href="#">
                         <p class="fst-italic mb-0">Aplikasi Point Of Sales</p>
                         <img src="{{ config('app.backend_url') . '/storage/' . $profile['logo'] }}" alt="logo"
-                            class="max-h-34" />
+                            class="max-h-70" />
                     </a>
                     <p class="mt-4">
                         {{ $profile['deskripsi'] ?? 'Deskripsi aplikasi' }}

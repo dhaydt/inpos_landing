@@ -9,3 +9,10 @@
 <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+<style>
+    .max-h-70 {
+        max-height: 70px !important;
+    }
+
+</style>
