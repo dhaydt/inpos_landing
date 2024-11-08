@@ -46,30 +46,24 @@
                 <div class="col-md-3">
                     <p class="fw-semibold mb-5 fs-6">Layanan</p>
                     <ul class="d-flex flex-column gap-4 fw-medium">
-                        <li><a>Point Of Sale</a></li>
-                        <li><a></a>Cashless Payment</a></li>
-                        <li><a>Manajemen Karyawan</a></li>
-                        <li><a>Manajemen Pelanggan</a></li>
-                        <li><a>Manajemen Inventori</a></li>
+                        @foreach ($footer_layanan as $key => $layanan)
+                        <li><a href="javascript:">{{ $layanan }}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <p class="fw-semibold mb-5 fs-6">Solusi Bisnis</p>
                     <ul class="d-flex flex-column gap-4 fw-medium">
-                        @foreach ($solusi_bisnis as $key => $solusi)
-                            <li><a href="">Toko Retail</a></li>
+                        @foreach ($footer_bisnis as $key => $solusi)
+                        <li><a href="javascript:">{{ $solusi }}</a></li>
                         @endforeach
-                        <li><a>Food & Beverage</a></li>
-                        <li><a>Jasa Laundry</a></li>
-                        <li><a>Babershop</a></li>
-                        <li><a>Carwash & Showroom</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <p class="fw-semibold mb-5 fs-6">Harga</p>
                     <ul class="d-flex flex-column gap-4 fw-medium">
-                        @foreach ($hargas as $key => $harga)
-                            <li><a href="{{ route('price') }}">{{ $harga->nama_harga }}</a></li>
+                        @foreach ($footer_harga as $key => $harga)
+                        <li><a href="javascript:">{{ $harga }}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -88,10 +82,10 @@
 
                 <div class="social-wrap">
                     @foreach ($sosmeds as $key => $sosmed)
-                        <a href="{{ $sosmed->url }}">
-                            <img src="{{ config('app.backend_url') . '/storage/' . $sosmed->icon }}"
-                                alt="{{ $sosmed->nama }}l" />
-                        </a>
+                    <a href="{{ $sosmed->url }}">
+                        <img src="{{ config('app.backend_url') . '/storage/' . $sosmed->icon }}"
+                            alt="{{ $sosmed->nama }}l" />
+                    </a>
                     @endforeach
                 </div>
             </div>

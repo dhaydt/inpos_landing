@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Master\Bisnis;
 use App\Models\Master\Harga;
+use App\Models\Master\Layanan;
 use App\Models\Master\LayananHome;
 use App\Models\Master\Mitra;
 use App\Models\Master\Pembayaran;
@@ -54,6 +55,22 @@ class AppServiceProvider extends ServiceProvider
             $mitra = [];
         }
 
+        $footer_layanan = Layanan::limit(5)->get()->pluck('judul');
+        $footer_bisnis = Bisnis::limit(5)->get()->pluck('judul');
+        $footer_harga = Harga::limit(5)->get()->pluck('nama_harga');
+
+        if (!$footer_layanan) {
+            $footer_layanan = [];
+        }
+
+        if (!$footer_bisnis) {
+            $footer_bisnis = [];
+        }
+
+        if (!$footer_harga) {
+            $footer_harga = [];
+        }
+
         $data['layanan'] = $layanan;
         $data['bisnis'] = $bisnis;
         $data['payment'] = $payment;
@@ -61,6 +78,10 @@ class AppServiceProvider extends ServiceProvider
         $data['sosmeds'] = Sosmed::all();
         $data['hargas'] = Harga::all();
         $data['solusi_bisnis'] = SolutionDetail::all();
+
+        $data['footer_bisnis'] = $footer_bisnis;
+        $data['footer_harga'] = $footer_harga;
+        $data['footer_layanan'] = $footer_layanan;
 
         View::share($data);
     }
