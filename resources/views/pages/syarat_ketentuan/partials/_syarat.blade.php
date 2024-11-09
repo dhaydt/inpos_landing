@@ -3,7 +3,7 @@
         <h2 class="section-title text-center">{{ $syarat->title }}</h2>
         <div class="box">
             <p>
-                {{ $syarat->term }}
+                {!! $syarat->term !!}
             </p>
         </div>
     </div>
