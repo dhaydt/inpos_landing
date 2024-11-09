@@ -34,8 +34,14 @@
                         data-desc="{{ App\CPU\Helpers::getCharStripTags($video->konten, 50) }}" data-src="video1.mp4">
                         <div class="row g-4">
                             <div class="col-3 col-md-4">
-                                <iframe width="426" height="260" src="{{ $video['video'] }}">
-                                </iframe>
+                                <?php
+                                    $video_url = explode('/', $video->video);
+                                    $video_id = end($video_url);
+                                ?>
+                                <a href="{{ $video['video'] }}" target="_blank">
+                                    <img src="https://img.youtube.com/vi/{{ $video_id }}/sddefault.jpg"
+                                        alt="Thumbnail 1" class="rounded-2 me-2 img-fluid" />
+                                </a>
                             </div>
                             <div class="col-9 col-md-8">
                                 <p class="mb-3 fw-medium">
