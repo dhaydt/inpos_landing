@@ -2,11 +2,6 @@
 
 @section('content')
 
-
-<!-- Hero Section -->
-@include('pages.price.partials._hero')
-<!-- Hero Section -->
-
 <!-- Price Section -->
 @include('pages.price.partials._price')
 <!-- Price Section -->

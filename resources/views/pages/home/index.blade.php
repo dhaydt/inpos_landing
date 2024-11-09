@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- Hero Section -->
-@include('pages.home.partials._hero')
-<!-- Hero Section -->
 
 <!-- Section 1 -->
 @include('pages.home.partials._layanan')
