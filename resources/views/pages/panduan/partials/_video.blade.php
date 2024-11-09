@@ -7,20 +7,13 @@
             <div class="col-md-7">
                 <div class="mb-3">
                     <div class="mb-3 position-relative">
-                        <?php
-                            $video_url = explode('/', $highlight_video->video);
-                            $video_id = end($video_url);
-                        ?>
-                        <img id="videoThumbnail" src="https://img.youtube.com/vi/{{ $video_id }}/sddefault.jpg"
-                            alt="Video Thumbnail" class="img-fluid w-100 rounded-4" />
-                        <div id="playButton" class="position-absolute top-50 start-50 translate-middle">
-                            <img src="assets/images/icons/play.svg" alt="play" />
-                        </div>
+                        <iframe width="450" height="315" src="{{ $highlight_video['video'] }}">
+                        </iframe>
                     </div>
-                    <video id="mainVideo" controls width="100%">
+                    {{-- <video id="mainVideo" controls width="100%">
                         <source id="videoSource" src="video1.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
-                    </video>
+                    </video> --}}
                 </div>
                 <div>
                     <h5 id="videoTitle">

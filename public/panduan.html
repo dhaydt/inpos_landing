@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Panduan</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  </head>
+  <body>
+    <button class="btn-wa">
+    <img src="assets/images/wa.png" alt="Whatsapp">
+    <span>Hubungi Kami</span>
+</button>
+    <header>
+  <nav class="navbar navbar-expand-lg fixed-top z-3 bg-transparent" id="navbar">
+    <div class="container">
+      <div class="nav-wrap">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/logo.png" alt="Logo" />
+        </a>
+
+        <div class="d-flex d-md flex-row-reverse flex-md-row">
+          <button
+            id="mobile-menu-button"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <i class="bi bi-list"></i>
+            <!-- <span class="navbar-toggler-icon"></span> -->
+          </button>
+
+          <!-- Offcanvas content -->
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- Navbar links inside Offcanvas -->
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="feature.html" data-link="feature.html">Fitur Aplikasi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="hardware.html" data-link="hardware.html">Perangkat</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="harga.html" data-link="harga.html">Harga</a>
+                </li>
+                <!-- Dropdown menu -->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="supportDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Support
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="supportDropdown">
+                    <li><a class="dropdown-item" href="panduan.html" data-link="padnuan.html">Panduan</a></li>
+                    <li><a class="dropdown-item" href="faq.html" data-link="faq.html">FAQ</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+              <!-- Login & Register buttons -->
+              <div class="d-flex gap-2 align-items-center mt-3 mt-md-0">
+                <a href="login.html" class="login px-4">Masuk</a>
+                <a href="register.html" class="btn btn-primary rounded-pill px-4"
+                  >Coba Gratis</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Language Dropdown -->
+          <select class="" name="lang" id="lang">
+            <option value="id">ID</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <!-- Hero Section -->
+    <section class="hero-section position-relative">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item position-relative active">
+            <div class="hero-overlay"></div>
+            <img
+              src="assets/images/home-slider-1.png"
+              class=""
+              alt="slider-img"
+            />
+            <div class="container">
+              <div class="hero-content">
+                <h2 class="hero-title">
+                  Perangkat Mesin Kasir untuk Bisnis Anda
+                </h2>
+                <p class="hero-subtitle">
+                  Perlengkapan penunjang untuk memudahkan segala urusan Transaksi dan Operasional bisnis anda
+                </p>
+                <div class="d-flex flex-column flex-md-row gap-3 mt-4">
+                  <a
+                    href="#"
+                    class="btn btn-primary rounded-pill px-5 py-2 fs-5 me-3"
+                    >Pesan Sekarang</a
+                  >
+                  <a
+                    href="#"
+                    class="btn btn-outline-light rounded-pill px-5 py-2 fs-5"
+                    >Konsultasi Kebutuhan</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item position-relative">
+            <div class="hero-overlay"></div>
+            <img
+              src="assets/images/home-slider-2.png"
+              class=""
+              alt="slider-img"
+            />
+            <div class="container">
+              <div class="hero-content">
+                <h2 class="hero-title">Mudah Berjualan Bisnismu Makin Cuan</h2>
+                <p class="hero-subtitle">
+                  Aplikasi Labba akan membantu mengelola bisnis jauh lebih mudah
+                  dan meningkatkan penjualanmu
+                </p>
+                <div class="d-flex flex-column flex-md-row gap-3 mt-4">
+                  <a
+                    href="#"
+                    class="btn btn-primary rounded-pill px-5 py-2 fs-5 me-3"
+                    >Pesan Sekarang</a
+                  >
+                  <a
+                    href="#"
+                    class="btn btn-outline-light rounded-pill px-5 py-2 fs-5"
+                    >Konsultasi Kebutuhan</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item position-relative">
+            <div class="hero-overlay"></div>
+            <img
+              src="assets/images/home-slider-3.png"
+              class=""
+              alt="slider-img"
+            />
+            <div class="container">
+              <div class="hero-content">
+                <h2 class="hero-title">Bisnis Tampil Beda Bersama Sipos</h2>
+                <p class="hero-subtitle">
+                  Tampil lebih modern dan profesional akan membuat pelanggan
+                  merasa puas atas layanan bisnismu
+                </p>
+                <div class="d-flex flex-column flex-md-row gap-3 mt-4">
+                  <a
+                    href="#"
+                    class="btn btn-primary rounded-pill px-5 py-2 fs-5 me-3"
+                    >Pesan Sekarang</a
+                  >
+                  <a
+                    href="#"
+                    class="btn btn-outline-light rounded-pill px-5 py-2 fs-5"
+                    >Konsultasi Kebutuhan</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <i class="bi bi-chevron-left btn-navigate" aria-hidden="true"></i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <i class="bi bi-chevron-right btn-navigate" aria-hidden="true"></i>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <!-- <section class="hero-section position-relative">
+      <div class="position-relative">
+        <div class="hero-overlay"></div>
+        <img src="assets/images/home-slider-1.png" class="" alt="slider-img" />
+        <div class="container">
+          <div class="hero-content">
+            <h2 class="hero-title">Perangkat Mesin Kasir untuk Bisnis Anda</h2>
+            <p class="hero-subtitle">
+              Perlengkapan penunjang untuk memudahkan segala urusan Transaksi
+              dan Operasional bisnis anda
+            </p>
+            <div class="d-flex flex-column flex-md-row gap-3 mt-4">
+              <a
+                href="#"
+                class="btn btn-primary rounded-pill px-5 py-2 fs-5 me-3"
+                >Pesan Sekarang</a
+              >
+              <a
+                href="#"
+                class="btn btn-outline-light rounded-pill px-5 py-2 fs-5"
+                >Konsultasi Kebutuhan</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- Hero Section -->
+
+    <!-- Section Panduan -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Panduan Aplikasi Sipos</h2>
+          <p class="section-text">
+            Aplikasi labba mudah digunakan, simak untuk panduan penggunaan
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <div class="panduan-card">
+              <img
+                src="assets/images/card-img.png"
+                alt="card image"
+                class="w-full"
+              />
+
+              <div class="panduan-card-body">
+                <p>Panduan Penggunaan</p>
+                <a href="#" class="fw-bold mb-3 d-block text-black">Cara mendapatkan dan memasang aplikasi Sipos bisnis</a>
+
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/admin.svg" alt="admin" />
+                    <span>Admin</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/time.svg" alt="time" />
+                    <span>3 min</span>
+                  </div>
+                </div>
+                <p>
+                  Berikut ini adalah beberapa langkah yang bisa Anda ikuti untuk
+                  melakukan instalasi aplikasi labba...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="panduan-card">
+              <img
+                src="assets/images/card-img.png"
+                alt="card image"
+                class="w-full"
+              />
+
+              <div class="panduan-card-body">
+                <p>Panduan Penggunaan</p>
+                <a href="#" class="fw-bold mb-3 d-block text-black">Cara mendapatkan dan memasang aplikasi Sipos bisnis</a>
+
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/admin.svg" alt="admin" />
+                    <span>Admin</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/time.svg" alt="time" />
+                    <span>3 min</span>
+                  </div>
+                </div>
+                <p>
+                  Berikut ini adalah beberapa langkah yang bisa Anda ikuti untuk
+                  melakukan instalasi aplikasi labba...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="panduan-card">
+              <img
+                src="assets/images/card-img.png"
+                alt="card image"
+                class="w-full"
+              />
+
+              <div class="panduan-card-body">
+                <p>Panduan Penggunaan</p>
+                <a href="#" class="fw-bold mb-3 d-block text-black">Cara mendapatkan dan memasang aplikasi Sipos bisnis</a>
+
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/admin.svg" alt="admin" />
+                    <span>Admin</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/time.svg" alt="time" />
+                    <span>3 min</span>
+                  </div>
+                </div>
+                <p>
+                  Berikut ini adalah beberapa langkah yang bisa Anda ikuti untuk
+                  melakukan instalasi aplikasi labba...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 d-none">
+            <div class="panduan-card">
+              <img
+                src="assets/images/card-img.png"
+                alt="card image"
+                class="w-full"
+              />
+
+              <div class="panduan-card-body">
+                <p>Panduan Penggunaan</p>
+                <a href="#" class="fw-bold mb-3 d-block text-black">Cara mendapatkan dan memasang aplikasi Sipos bisnis</a>
+
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/admin.svg" alt="admin" />
+                    <span>Admin</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/time.svg" alt="time" />
+                    <span>3 min</span>
+                  </div>
+                </div>
+                <p>
+                  Berikut ini adalah beberapa langkah yang bisa Anda ikuti untuk
+                  melakukan instalasi aplikasi labba...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 d-none">
+            <div class="panduan-card">
+              <img
+                src="assets/images/card-img.png"
+                alt="card image"
+                class="w-full"
+              />
+
+              <div class="panduan-card-body">
+                <p>Panduan Penggunaan</p>
+                <a href="#" class="fw-bold mb-3 d-block text-black">Cara mendapatkan dan memasang aplikasi Sipos bisnis</a>
+
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/admin.svg" alt="admin" />
+                    <span>Admin</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/time.svg" alt="time" />
+                    <span>3 min</span>
+                  </div>
+                </div>
+                <p>
+                  Berikut ini adalah beberapa langkah yang bisa Anda ikuti untuk
+                  melakukan instalasi aplikasi labba...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 d-none">
+            <div class="panduan-card">
+              <img
+                src="assets/images/card-img.png"
+                alt="card image"
+                class="w-full"
+              />
+
+              <div class="panduan-card-body">
+                <p>Panduan Penggunaan</p>
+                <a href="#" class="fw-bold mb-3 d-block text-black">Cara mendapatkan dan memasang aplikasi Sipos bisnis</a>
+
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/admin.svg" alt="admin" />
+                    <span>Admin</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/time.svg" alt="time" />
+                    <span>3 min</span>
+                  </div>
+                </div>
+                <p>
+                  Berikut ini adalah beberapa langkah yang bisa Anda ikuti untuk
+                  melakukan instalasi aplikasi labba...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 d-none">
+            <div class="panduan-card">
+              <img
+                src="assets/images/card-img.png"
+                alt="card image"
+                class="w-full"
+              />
+
+              <div class="panduan-card-body">
+                <p>Panduan Penggunaan</p>
+                <a href="#" class="fw-bold mb-3 d-block text-black">Cara mendapatkan dan memasang aplikasi Sipos bisnis</a>
+
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/admin.svg" alt="admin" />
+                    <span>Admin</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/time.svg" alt="time" />
+                    <span>3 min</span>
+                  </div>
+                </div>
+                <p>
+                  Berikut ini adalah beberapa langkah yang bisa Anda ikuti untuk
+                  melakukan instalasi aplikasi labba...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 d-none">
+            <div class="panduan-card">
+              <img
+                src="assets/images/card-img.png"
+                alt="card image"
+                class="w-full"
+              />
+
+              <div class="panduan-card-body">
+                <p>Panduan Penggunaan</p>
+                <a href="#" class="fw-bold mb-3 d-block text-black">Cara mendapatkan dan memasang aplikasi Sipos bisnis</a>
+
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/admin.svg" alt="admin" />
+                    <span>Admin</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/time.svg" alt="time" />
+                    <span>3 min</span>
+                  </div>
+                </div>
+                <p>
+                  Berikut ini adalah beberapa langkah yang bisa Anda ikuti untuk
+                  melakukan instalasi aplikasi labba...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 d-none">
+            <div class="panduan-card">
+              <img
+                src="assets/images/card-img.png"
+                alt="card image"
+                class="w-full"
+              />
+
+              <div class="panduan-card-body">
+                <p>Panduan Penggunaan</p>
+                <a href="#" class="fw-bold mb-3 d-block text-black">Cara mendapatkan dan memasang aplikasi Sipos bisnis</a>
+
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/admin.svg" alt="admin" />
+                    <span>Admin</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/icons/time.svg" alt="time" />
+                    <span>3 min</span>
+                  </div>
+                </div>
+                <p>
+                  Berikut ini adalah beberapa langkah yang bisa Anda ikuti untuk
+                  melakukan instalasi aplikasi labba...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="d-flex mx-auto mt-5 gap-3 align-items-center justify-content-center btn fs-5" id="see-more-btn"
+        >
+          <span>Lihat lebih banyak</span>
+          <img src="assets/images/icons/down.svg" alt="down" />
+        </button>
+      </div>
+    </section>
+    <!-- Section Panduan -->
+
+    <!-- Section Video -->
+    <section id="video">
+      <div class="container">
+        <h3 class="fs-5">Tonton video tutorial</h3>
+
+        <div class="row mt-4 g-4">
+          <!-- Bagian Kiri: Video Player dan Deskripsi -->
+          <div class="col-md-7">
+            <div class="mb-3">
+              <div class="mb-3 position-relative">
+                <img
+                  id="videoThumbnail"
+                  src="assets/images/thumb-video.png"
+                  alt="Video Thumbnail"
+                  class="img-fluid w-100 rounded-4"
+                />
+                <div
+                  id="playButton"
+                  class="position-absolute top-50 start-50 translate-middle"
+                >
+                  <img src="assets/images/icons/play.svg" alt="play" />
+                </div>
+              </div>
+              <video id="mainVideo" controls width="100%">
+                <source id="videoSource" src="video1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div>
+              <h5 id="videoTitle">
+                Cara mendapatkan dan memasang aplikasi Sipos bisnis
+              </h5>
+              <p>25 Oktober 2024</p>
+              <p class="truncate-multiline" id="videoDesc">
+                Video berikut akan membantu Anda untuk melakukan instalasi
+                aplikasi labba, Berikut adalah langkah-langkahnya: 1. Masuk ke web labba 2. Pilih play store jika anda menggunakan perangkat Android 3. Pilih menu apple store jika anda menggunakan perangkat iOS 4
+              </p>
+            </div>
+          </div>
+
+          <!-- Bagian Kanan: List Video -->
+          <div class="col-md-5">
+            <ul class="d-flex flex-column gap-3">
+              <li
+                class="video-item"
+                data-title="Judul 1"
+                data-desc="Video berikut akan membantu Anda untuk melakukan instalasi aplikasi labba, Berikut adalah langkah-langkahnya: 1. Masuk ke web labba 2. Pilih play store jika anda menggunakan perangkat Android 3. Pilih menu apple store jika anda menggunakan perangkat iOS 4......."
+                data-thumbnail="assets/images/thumb-video.png"
+                data-src="video1.mp4"
+              >
+                <div class="row g-4">
+                  <div class="col-3 col-md-4">
+                    <img
+                      src="assets/images/thumb-video.png"
+                      alt="Thumbnail 1"
+                      class="rounded-2 me-2 img-fluid"
+                    />
+                  </div>
+                  <div class="col-9 col-md-8">
+                    <p class="mb-3 fw-medium">
+                      Judul 1
+                    </p>
+                    <p>25 Oktober 2024</p>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="video-item"
+                data-title="Judul 2"
+                data-desc="Video berikut akan membantu Anda untuk melakukan instalasi aplikasi labba, Berikut adalah langkah-langkahnya: 1. Masuk ke web labba 2. Logout"
+                data-thumbnail="assets/images/thumb-video.png"
+                data-src="videos/video2.mp4"
+              >
+                <div class="row g-4">
+                  <div class="col-3 col-md-4">
+                    <img
+                      src="assets/images/thumb-video.png"
+                      alt="Thumbnail 1"
+                      class="rounded-2 me-2 img-fluid"
+                    />
+                  </div>
+                  <div class="col-9 col-md-8">
+                    <p class="mb-3 fw-medium">
+                      Judul 2
+                    </p>
+                    <p>25 Oktober 2024</p>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="video-item"
+                data-title="Judul 3"
+                data-desc="Video berikut akan membantu Anda untuk melakukan instalasi aplikasi labba, Berikut adalah langkah-langkahnya: 1. Masuk ke web labba"
+                data-thumbnail="assets/images/thumb-video.png"
+                data-src="videos/video3.mp4"
+              >
+                <div class="row g-4">
+                  <div class="col-3 col-md-4">
+                    <img
+                      src="assets/images/thumb-video.png"
+                      alt="Thumbnail 1"
+                      class="rounded-2 me-2 img-fluid"
+                    />
+                  </div>
+                  <div class="col-9 col-md-8">
+                    <p class="mb-3 fw-medium">
+                      Judul 3
+                    </p>
+                    <p>25 Oktober 2024</p>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="video-item"
+                data-title="Judul 4"
+                data-desc="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis corporis harum dolor recusandae iusto."
+                data-thumbnail="assets/images/thumb-video.png"
+                data-src="videos/video4.mp4"
+              >
+                <div class="row g-4">
+                  <div class="col-3 col-md-4">
+                    <img
+                      src="assets/images/thumb-video.png"
+                      alt="Thumbnail 1"
+                      class="rounded-2 me-2 img-fluid"
+                    />
+                  </div>
+                  <div class="col-9 col-md-8">
+                    <p class="mb-3 fw-medium">
+                      Judul 4
+                    </p>
+                    <p>25 Oktober 2024</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Video -->
+
+    <!-- Footer -->
+<footer>
+  <!-- Floating -->
+  <div id="float">
+    <div class="container">
+      <div class="floating bg-floating shadow">
+        <div>
+          <p>Maksimalkan Bisnismu, Pakai Sipos Sekarang!</p>
+          <p>Harga mulai dari Rp 150,000 / Bulan</p>
+
+          <div
+            class="d-flex flex-column flex-md-row align-items-md-center gap-3 mt-5"
+          >
+            <a href="#" class="btn btn-primary rounded-pill fs-5 px-4 py-2"
+              >Beli Paket Sekarang</a
+            >
+            <a
+              href="#"
+              class="btn btn-outline-light rounded-pill fs-5 px-4 py-2"
+              >Konsultasi Kebutuhan</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Floating -->
+
+  <div class="footer-content">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-md-3">
+          <a href="#">
+            <p class="fst-italic mb-0">Aplikasi Point Of Sales</p>
+            <img src="assets/images/logo.png" alt="logo" />
+          </a>
+          <p class="mt-4">
+            Aplikasi kasir online terbaik dan terlengkap untuk semua jenis usaha
+            naikin laba.
+          </p>
+
+          <div class="contact mt-4">
+            <h2 class="fs-5">Head Office</h2>
+            <p>Jl. Diponegoro 240</p>
+            <p>Tambun, Bekasi, Jawa Barat 17510</p>
+          </div>
+          <div class="contact mt-4">
+            <h2 class="fs-5">Labba Care</h2>
+            <p>021-12344567</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <p class="fw-semibold mb-5 fs-6">Layanan</p>
+          <ul class="d-flex flex-column gap-4 fw-medium">
+            <li><a href="point-of-sales.html">Point Of Sale</a></li>
+            <li><a href="#">Cashless Payment</a></li>
+            <li><a href="#">Manajemen Karyawan</a></li>
+            <li><a href="#">Manajemen Pelanggan</a></li>
+            <li><a href="#">Manajemen Inventori</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <p class="fw-semibold mb-5 fs-6">Solusi Bisnis</p>
+          <ul class="d-flex flex-column gap-4 fw-medium">
+            <li><a href="toko-retail.html">Toko Retail</a></li>
+            <li><a href="#">Food & Beverage</a></li>
+            <li><a href="#">Jasa Laundry</a></li>
+            <li><a href="#">Babershop</a></li>
+            <li><a href="#">Carwash & Showroom</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <p class="fw-semibold mb-5 fs-6">Harga</p>
+          <ul class="d-flex flex-column gap-4 fw-medium">
+            <li><a href="paket-basic.html">Paket Basic</a></li>
+            <li><a href="#">Paket Advance</a></li>
+            <li><a href="#">Paket Professional</a></li>
+            <li><a href="#">Paket Enterprise</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="border-top border-bottom border-white py-3 mt-5 d-flex flex-column flex-md-row align-items-md-center justify-content-between row-gap-3"
+      >
+        <div class="d-flex align-items-center gap-3">
+          <a href="#">
+            <img
+              src="assets/images/googleplay-download.png"
+              alt="googleplay-download"
+              class="w-full"
+            />
+          </a>
+          <a href="#">
+            <img
+              src="assets/images/appstore-download.png"
+              alt="appstore-download"
+              class="w-full"
+            />
+          </a>
+        </div>
+
+        <div class="social-wrap">
+          <a href="#">
+            <img src="assets/images/mail.png" alt="mail" />
+          </a>
+          <a href="#">
+            <img src="assets/images/fb.png" alt="fb" />
+          </a>
+          <a href="#">
+            <img src="assets/images/tiktok.png" alt="tiktok" />
+          </a>
+          <a href="#">
+            <img src="assets/images/ig.png" alt="ig" />
+          </a>
+          <a href="#">
+            <img src="assets/images/yt.png" alt="youtube" />
+          </a>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-center mt-4">
+        <p class="fw-semibold">2024 PT. NPI Indonesia. All Right Reserved</p>
+        <div class="d-flex align-items-center gap-3 justify-content-center">
+          <a href="syarat-ketentuan.html">Syarat dan Ketentuan</a>
+          <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer -->
+
+
+    <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
