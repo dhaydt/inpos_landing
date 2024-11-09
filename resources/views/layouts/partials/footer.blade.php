@@ -5,13 +5,15 @@
         <div class="container">
             <div class="floating bg-floating shadow">
                 <div>
-                    <p>Maksimalkan Bisnismu, Pakai Sipos Sekarang!</p>
-                    <p>Harga mulai dari Rp 150,000 / Bulan</p>
+                    <p>
+                        {!! $profile['slogan'] ?? '-' !!}
+                    </p>
 
                     <div class="d-flex flex-column flex-md-row align-items-md-center gap-3 mt-5">
                         <a href="{{ route('price') }}" class="btn btn-primary rounded-pill fs-5 px-4 py-2">Beli Paket
                             Sekarang</a>
-                        <a href="#" class="btn btn-outline-light rounded-pill fs-5 px-4 py-2">Konsultasi
+                        <a href="https://wa.me/{{ '62'. ((int)$profile['no_wa'] ?? 00) }}" target="_blank"
+                            class="btn btn-outline-light rounded-pill fs-5 px-4 py-2">Konsultasi
                             Kebutuhan</a>
                     </div>
                 </div>
