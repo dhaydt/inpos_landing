@@ -13,10 +13,10 @@
         <img src="assets/images/loader.svg" alt="loader" />
     </div>
 
-    <button class="btn-wa">
+    <a href="https://wa.me/{{ '62'. ((int)$profile['no_wa'] ?? 00) }}" class="btn-wa">
         <img src="assets/images/wa.png" alt="Whatsapp">
         <span>Hubungi Kami</span>
-    </button>
+    </a>
 
     <div id="content">
         @include('layouts.partials.header')
