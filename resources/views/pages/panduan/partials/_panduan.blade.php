@@ -11,7 +11,8 @@
             @foreach ($panduan as $key => $p)
             <div class="col-12 col-md-4">
                 <div class="panduan-card">
-                    <img src="assets/images/card-img.png" alt="card image" class="w-full" />
+                    <img src="{{ config('app.backend_url') . '/storage/' . $p->gambar }}" alt="card image"
+                        class="w-full" />
 
                     <div class="panduan-card-body">
                         <p>Panduan Penggunaan</p>

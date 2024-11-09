@@ -12,7 +12,7 @@
             <div class="col-12 col-md-4">
                 <div class="perangkat-card">
                     <div class="perangkat-card-img">
-                        <img src="assets/images/perangkat-1.png" alt="perangkat" />
+                        <img src="{{ config('app.backend_url') . '/storage/' . $hardware->gambar }}" alt="perangkat" />
                     </div>
                     <h3 class="fs-5">{{ $hardware->nama }}</h3>
                     <div class="d-flex align-items-center justify-content-between mt-3">
