@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Master\Faq;
+use App\Models\Master\Fitur;
 use App\Models\Master\FiturLengkap;
 use App\Models\Master\Harga;
 use App\Models\Master\Mitra;
@@ -41,6 +42,7 @@ class Controller extends BaseController
 
     public function price(){
         $data['prices'] = Harga::all();
+        $data['features'] = Fitur::all();
         return view('pages.price.index', $data);
     }
 
