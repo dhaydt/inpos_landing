@@ -3,7 +3,6 @@
         .max-h-34 {
             max-height: 34px;
         }
-
     </style>
     <nav class="navbar navbar-expand-lg fixed-top z-3 bg-transparent" id="navbar">
         <div class="container">

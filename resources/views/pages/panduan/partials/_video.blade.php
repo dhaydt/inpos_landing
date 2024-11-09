@@ -7,7 +7,11 @@
             <div class="col-md-7">
                 <div class="mb-3">
                     <div class="mb-3 position-relative">
-                        <img id="videoThumbnail" src="https://img.youtube.com/vi/3FiIZuGypto/sddefault.jpg"
+                        <?php
+                            $video_url = explode('/', $highlight_video->video);
+                            $video_id = end($video_url);
+                        ?>
+                        <img id="videoThumbnail" src="https://img.youtube.com/vi/{{ $video_id }}/sddefault.jpg"
                             alt="Video Thumbnail" class="img-fluid w-100 rounded-4" />
                         <div id="playButton" class="position-absolute top-50 start-50 translate-middle">
                             <img src="assets/images/icons/play.svg" alt="play" />
@@ -33,22 +37,25 @@
             <div class="col-md-5">
                 <ul class="d-flex flex-column gap-3">
                     @foreach ($other_videos as $key => $video)
-                        <li class="video-item" data-title="{{ $video->judul }}"
-                            data-desc="{{ App\CPU\Helpers::getCharStripTags($video->deskripsi, 50) }}"
-                            data-src="video1.mp4">
-                            <div class="row g-4">
-                                <div class="col-3 col-md-4">
-                                    <img src="https://img.youtube.com/vi/3FiIZuGypto/sddefault.jpg"
-                                        class="rounded-2 me-2 img-fluid" />
-                                </div>
-                                <div class="col-9 col-md-8">
-                                    <p class="mb-3 fw-medium">
-                                        {{ $video->judul }}
-                                    </p>
-                                    <p>{{ App\CPU\Helpers::getHari($video->tanggal_upload) }}</p>
-                                </div>
+                    <li class="video-item" data-title="{{ $video->judul }}"
+                        data-desc="{{ App\CPU\Helpers::getCharStripTags($video->konten, 50) }}" data-src="video1.mp4">
+                        <div class="row g-4">
+                            <div class="col-3 col-md-4">
+                                <?php
+                                    $video_url = explode('/', $video->video);
+                                    $video_id = end($video_url);
+                                ?>
+                                <img src="https://img.youtube.com/vi/{{ $video_id }}/sddefault.jpg" alt="Thumbnail 1"
+                                    class="rounded-2 me-2 img-fluid" />
                             </div>
-                        </li>
+                            <div class="col-9 col-md-8">
+                                <p class="mb-3 fw-medium">
+                                    {{ $video->judul }}
+                                </p>
+                                <p>{{ App\CPU\Helpers::getHari($video->tanggal_upload) }}</p>
+                            </div>
+                        </div>
+                    </li>
                     @endforeach
                 </ul>
             </div>

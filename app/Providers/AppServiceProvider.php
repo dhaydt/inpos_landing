@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Master\Banner;
 use App\Models\Master\Bisnis;
 use App\Models\Master\Harga;
 use App\Models\Master\Layanan;
@@ -12,6 +13,7 @@ use App\Models\Master\Profile\Profile;
 use App\Models\Master\ProfileWebsite;
 use App\Models\Master\SolutionDetail;
 use App\Models\Master\Sosmed;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -71,6 +73,14 @@ class AppServiceProvider extends ServiceProvider
 
         if (!$footer_harga) {
             $footer_harga = [];
+        }
+
+        $data['banners'] = [];
+
+        if(Route::currentRouteName() == 'home'){
+            $data['banners'] = Banner::orderBy('id', 'DESC')->get();
+        }else{
+            $data['banners'] = Banner::all();
         }
 
         $data['layanan'] = $layanan;
