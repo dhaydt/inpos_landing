@@ -7,7 +7,7 @@
             <div class="col-md-7">
                 <div class="mb-3">
                     <div class="mb-3 position-relative">
-                        <iframe width="450" height="315" src="{{ $highlight_video['video'] }}">
+                        <iframe width="640" height="360" src="{{ $highlight_video['video'] }}">
                         </iframe>
                     </div>
                     {{-- <video id="mainVideo" controls width="100%">
@@ -34,12 +34,8 @@
                         data-desc="{{ App\CPU\Helpers::getCharStripTags($video->konten, 50) }}" data-src="video1.mp4">
                         <div class="row g-4">
                             <div class="col-3 col-md-4">
-                                <?php
-                                    $video_url = explode('/', $video->video);
-                                    $video_id = end($video_url);
-                                ?>
-                                <img src="https://img.youtube.com/vi/{{ $video_id }}/sddefault.jpg" alt="Thumbnail 1"
-                                    class="rounded-2 me-2 img-fluid" />
+                                <iframe width="426" height="260" src="{{ $video['video'] }}">
+                                </iframe>
                             </div>
                             <div class="col-9 col-md-8">
                                 <p class="mb-3 fw-medium">
