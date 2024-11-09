@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+{{--
+<link href="{{ asset('assets/css/bootstrap-icon.css') }}" rel="stylesheet" /> --}}
 
 <style>
     .max-h-70 {

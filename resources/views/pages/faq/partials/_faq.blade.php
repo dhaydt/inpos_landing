@@ -9,21 +9,20 @@
         <div class="accordion" id="faqAccordion">
             <!-- FAQ 1 -->
             @foreach ($faqs as $key => $faq)
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            {{ $faq->judul }}
-                        </button>
-                    </h2>
-                    <div id="collapseOne"
-                        class="accordion-collapse collapse @if ($key == 0) show @endif"
-                        aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            {!! $faq->jawaban !!}
-                        </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne{{ $key }}" aria-expanded="true" aria-controls="collapseOne">
+                        {{ $faq->judul }}
+                    </button>
+                </h2>
+                <div id="collapseOne{{ $key }}" class="accordion-collapse collapse @if ($key == 0) show @endif"
+                    aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        {!! $faq->jawaban !!}
                     </div>
                 </div>
+            </div>
             @endforeach
         </div>
     </div>
