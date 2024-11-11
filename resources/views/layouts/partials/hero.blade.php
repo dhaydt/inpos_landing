@@ -15,7 +15,8 @@
                         </p>
                         <div class="d-flex flex-column flex-md-row gap-3 mt-4">
                             <a href="#" class="btn btn-primary rounded-pill px-5 py-2 fs-5 me-3">Lihat Demo</a>
-                            <a href="#" class="btn btn-outline-light rounded-pill px-5 py-2 fs-5">Whatsapp
+                            <a href="https://wa.me/{{ '62'. ((int)$profile['no_wa'] ?? 00) }}" target="_blank"
+                                class="btn btn-outline-light rounded-pill px-5 py-2 fs-5">Whatsapp
                                 Sekarang</a>
                         </div>
                     </div>
