@@ -13,7 +13,7 @@
                 <div class="col-9">
                     <b>{{ $feature->judul }}</b>
                     <p class="mt-2">
-                        {!! $feature->kontent !!}
+                        {!! $feature->konten !!}
                     </p>
                 </div>
             </div>
